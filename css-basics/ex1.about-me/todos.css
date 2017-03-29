@@ -1,0 +1,13 @@
+body {
+    background: orange;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li{
+    border: 1px solid red;
+}
+
+.complete {
+    text-decoration: line-through;
+    /*background: blue;*/
+}
