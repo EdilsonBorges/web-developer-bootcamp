@@ -1,16 +1,22 @@
 h1 {
-	color: #0000FF;
+	color: rgb(255,0,0);;
 }
 li {
 	color: purple;
 }
 
 /*About Css Hexadecimal - base 16
-0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
-# _ _ 	 _ _ 	 _ _ 
-#(red) (green) (blue)
 
-RED: #FF0000;
+	0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+	# _ _ 	 _ _ 	 _ _ 
+	#(red) (green) (blue)
+	red: #FF0000;
+
+/*About RGB
+	0 - 255
+	rgb(  _ ,    _ ,     _ )
+		(red) (green) (blue)
+	red: rgb(255,0,0);
 
 obs: I dont need tag style in style file;
 */
