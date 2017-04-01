@@ -4,7 +4,7 @@ DO NOT ALTER THE EXISTING HTML TO DO THIS.  WRITE ONLY CSS!
 /* Give the <body> element a background of #bdc3c7*/
 
 body {
-    color: #bdc3c7;
+    background-color: #bdc3c7;
 }
 
 /* Make the <h1> element #9b59b6*/
@@ -63,17 +63,21 @@ input[type='text'] {
 
 /* Give both <p>'s inside the 3rd <div> a pink background*/
 
-p {
+div:nth-child(3) p {
     background-color: pink;
 }
 
 /* Give the 2nd <p> inside the 3rd <div> a 5px white border*/
 
-
+div:nth-child(3) p:nth-child(2) {
+    border: 5px solid white;
+}
 
 /* Make the <em> in the 3rd <div> element white and 20px font(font-size:20px)*/
 
-
+div:nth-child(3) em {
+    font-size:20px
+}
 
 /*BONUS CHALLENGES*/
 /*You may need to research some other selectors and properties*/
