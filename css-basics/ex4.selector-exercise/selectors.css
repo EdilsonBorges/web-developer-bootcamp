@@ -23,7 +23,7 @@ li {
 
 /*Change the background on every paragraph to be yellow*/
 p {
-    color: yellow;
+    background-color: yellow;
 }
 
 /*Make all inputs have a 3px red border*/
@@ -71,8 +71,8 @@ div:nth-of-type(3) em {
 /*You may need to research some other selectors and properties*/
 
 /*Make all "checked" checkboxes have a left margin of 50px(margin-left: 50px)*/
-li input[checked] {
-    margin-left: 150px;
+input:checked {
+    margin-left: 50px;
 }
 
 /* Make the <label> elements all UPPERCASE without changing the HTML(definitely look this one up*/
@@ -92,6 +92,6 @@ h1:hover{
 }
 
 /*Make the <a> element's that have been visited gray */
-a {
+a:visited {
     color: grey;
 }
