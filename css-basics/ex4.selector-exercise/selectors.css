@@ -91,12 +91,12 @@ li input[checked] {
 /* Make the <label> elements all UPPERCASE without changing the HTML(definitely look this one up*/
 
 label {
-    text-decoration: overline;
+    text-transform: uppercase;
 }
 
 /*Make the first letter of the element with id 'special' green and 100px font size(font-size: 100)*/
 
-#special{
+#special::first-letter {
     font-size: 100;
     color: green;
 }
