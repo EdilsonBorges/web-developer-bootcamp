@@ -1,21 +1,25 @@
 body {
-    font-family: source sans pro;
-    width: 700px;
-    border: #bdc3c7 solid 20px;
+    border: 20px solid#bdc3c7;
     padding: 20px;
-    width: 50%;
+    max-width: 700px;
+    width: 80%;
+    margin: 20px auto;
+    font-family: source sans pro;
 }
 
-h3 {
+.quote {
+    border-left: 5px solid rgba(000,000,000,0.2);
+    padding-left: 5px;
+}
+
+.date {
     color: #3498db;
     text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
 
 h2 {
     color: #2c3e50;
     text-transform: capitalize;
-}
-
-p:nth-of-type(1) {
-    border-left: 5px solid rgba(000,000,000,0.2);
+    font-size: 2.0rem;
 }
