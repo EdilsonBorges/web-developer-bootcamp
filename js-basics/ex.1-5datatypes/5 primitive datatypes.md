@@ -10,6 +10,7 @@
 36 			enter-> 36
 5 + 6 		enter-> 11
 10 % 3		enter-> 1
+100 % 3		enter-> 1
 
 ######### string #########
 
@@ -22,7 +23,8 @@
 "one simple\"test\"!"		enter-> "one simple"test"!"
 "one simple\\\"test\\\"!" 	enter-> "one simple\"test\"!
 "whats Up?".length		 	enter-> 9
-
+("what" + "what")[6]	    enter-> "a"
+"a".length % "a\\".length  enter->  1 
 
 ######### booleans #########
 
