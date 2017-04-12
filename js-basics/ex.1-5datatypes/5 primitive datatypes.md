@@ -32,6 +32,9 @@ true
 false
 
 ------ console -------
+true                enter-> true
+true + false        enter-> 1
+true + true+ false  enter-> 2
 
 ######### null and undefined #########
 
@@ -39,7 +42,11 @@ null
 undefined
 
 ------ console -------
-
+var a          enter-> undefined
+a              enter-> undefined
+b              enter-> Uncaught ReferenceError: b is not defined
+var a = null   enter-> undefined
+a              enter-> null
 
 ######### Variables #########
 
