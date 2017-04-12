@@ -40,3 +40,14 @@ undefined
 
 ------ console -------
 
+
+######### Variables #########
+
+var something
+
+------ console -------
+var name = "Rusty";     enter-> undefined
+var sNumber = 72;       enter-> undefined
+var isAdorable = true;  enter-> undefined
+"Hello "+ name          enter-> "Hello Rusty"
+sNumber % 7             enter-> 2
