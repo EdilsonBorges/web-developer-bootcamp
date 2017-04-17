@@ -48,3 +48,10 @@ if(age % 2 !== 0) {
 if(age % Math.sqrt(age) === 0) {
   console.log("Your age is a perfect square!");
 }
+
+// DRY = Don't repeat yourself
+var count = 1;
+while(count < 6) {
+    console.log("count is: "+count);
+    count++;
+}
