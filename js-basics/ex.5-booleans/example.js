@@ -22,3 +22,8 @@ var y = 8;
 !!0          //false
 !!-1         //true
 !!NaN        //false
+
+var str = " "
+var msg = "haha! "
+var isFunny = "false"
+!((str || msg) && isFunny)
