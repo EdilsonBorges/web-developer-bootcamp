@@ -28,3 +28,15 @@ function square(x) {
 }
 
 "4 square is: " + square(4);
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
+capitalize("paRiS");
+
+// So, now we do have:
+//  charAt
+//  slice
+//  toUpperCase
+//  toLowerCase
