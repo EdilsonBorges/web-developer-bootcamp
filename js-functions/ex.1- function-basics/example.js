@@ -22,3 +22,9 @@ function greet(person1, person2, person3) {
 }
 
 greet("Harry","Ron","Hermione");
+
+function square(x) {
+    return x*x;
+}
+
+"4 square is: " + square(4);
