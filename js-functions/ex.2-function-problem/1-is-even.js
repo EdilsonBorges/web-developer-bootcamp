@@ -9,3 +9,9 @@ function isEven(number) {
         return "This is not a number";
     }
 }
+
+// shortening
+
+function isEven(number) {
+    return number % 2 === 0;
+}
