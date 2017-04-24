@@ -17,4 +17,4 @@ function printColor(color) {
 }
 
 colors.forEach(printColor()); // you can't use parentheses
-colors.forEach(printColor); // you can't use parentheses
+colors.forEach(printColor); // calling each value with another function
