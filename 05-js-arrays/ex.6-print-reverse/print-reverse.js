@@ -1,5 +1,5 @@
 function printReverse (datas) {
-    for(j = datas.length; j >= 0; j--) {
+    for(j = datas.length-1; j >= 0; j--) {
         console.log(datas[j]);
     }
 }
@@ -8,7 +8,7 @@ printReverse([1,2,3,4]);
 function isUniform(data) {
     var number = data[0];
     for(i = 0; i < data.length;i++){
-        if(number != data[i]) {
+        if(number !== data[i]) {
             return false;
         }
         number = data[i];
@@ -20,7 +20,7 @@ isUniform(['1','1','1','1']);
 function sumArray(data) {
     var sum = 0;
     for(i = 0; i< data.length; i++) {
-        sum = sum + data[i];
+        sum += data[i];
     }
     return sum;
 }
