@@ -16,6 +16,13 @@ ownForEach(colors, function(color){
   console.log(color);
 });
 
-
-//function that i'll be executed just once:
-(function(){console.log("Im a function")})()
+// Own For Each on prototype
+Array.prototype.ownForEach = function(func){
+    for(i = 0; i < this.length; i++){
+        func(this[i]);
+    }   
+}
+var testing = ['test 1', 'test 2', 'test 3'];
+testing.ownForEach(function(name){
+    console.log("I love "+name);
+});
