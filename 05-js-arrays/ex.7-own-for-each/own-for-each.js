@@ -26,3 +26,6 @@ var testing = ['test 1', 'test 2', 'test 3'];
 testing.ownForEach(function(name){
     console.log("I love "+name);
 });
+
+//function that will be executed just once:
+(function(){console.log("Im a function")})()
