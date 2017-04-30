@@ -21,11 +21,15 @@ var movies = [
     }
 ];
 
-movies.forEach(function (value) {
-    if(value.hasWatched == true) {
-        value.hasWatched = 'watched';
-    } else {
-        value.hasWatched = 'not seen';
-    }
-    console.log('You have '+value.hasWatched+' "'+value.title+'" - '+value.rating+' stars');
+function buildString(movies) {
+        if(movies.hasWatched == true) {
+            movies.hasWatched = 'watched';
+        } else {
+            movies.hasWatched = 'not seen';
+        }
+        return 'You have '+movies.hasWatched+' "'+movies.title+'" - '+movies.rating+' stars';
+}
+
+movies.forEach(function (movies) {
+    console.log(buildString(movies));
 });
