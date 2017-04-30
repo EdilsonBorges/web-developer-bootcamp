@@ -32,4 +32,15 @@ console.dir(className);
 var tagName = document.getElementsByTagName('body');
 console.dir(tagName);
 
+var resultId = document.querySelector('#highlight');
+console.dir(resultId);
+
+var resultClass = document.querySelector('.bolded');
+console.dir(resultClass); // just do with the first match
+
+var resultElement = document.querySelector('h1');
+console.dir(resultElement.outerHTML); // just do with the first match
+
+var allH1 = document.querySelectorAll('h1');
+console.dir(allH1);
 </script>
