@@ -1,18 +1,31 @@
 var movies = [
     {
         title: 'In Bruges',
-        stars: 5
+        rating: 5,
+        hasWatched: true
     },
     {
         title: 'Frozen',
-        stars: 4.5
+        rating: 4.5,
+        hasWatched: false
     },
     {
         title: 'Mad Max Fury Road',
-        stars: 5
+        rating: 5,
+        hasWatched: true
     },
     {
         title: 'Les Miserables',
-        stars: 3.5
+        rating: 3.5,
+        hasWatched: false
     }
 ];
+
+movies.forEach(function (value) {
+    if(value.hasWatched == true) {
+        value.hasWatched = 'watched';
+    } else {
+        value.hasWatched = 'not seen';
+    }
+    console.log('You have '+value.hasWatched+' "'+value.title+'" - '+value.rating+' stars');
+});
