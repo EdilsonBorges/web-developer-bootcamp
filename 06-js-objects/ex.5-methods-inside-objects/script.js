@@ -8,3 +8,12 @@ var obj = {
     }
 };
 obj.add(1,3);
+
+var comments = {};
+comments.data = ['test1','test2','test3'];
+
+comments.print = function() {
+    this.data.forEach(function(element) {
+        console.log(element)
+    });
+}
