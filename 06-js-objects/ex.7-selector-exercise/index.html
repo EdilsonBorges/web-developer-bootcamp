@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>I'm an H1!</h1>
+        <p id='first' class='special'>Hello</p>
+        <p class='special'>Goodbye</p>
+        <p>Hi again</p>
+        <p id='last'>Goodbye Again</p>
+
+    </body>
+</html>
+
+<script>
+    var firstWay = document.getElementById('first');
+    console.dir(firstWay);
+
+    var secondWay = document.getElementsByTagName('p');
+    console.dir(secondWay);
+
+    var thirdWay = document.querySelector('.special');
+    console.dir(thirdWay);
+
+    var fourthWay = document.getElementsByClassName('special')[0];
+    console.dir(fourthWay);
+
+    var fifthWay = document.querySelectorAll('#first');
+    console.dir(fifthWay);
+
+    var sixthWay = document.querySelector('h1 + p');
+    console.dir(sixthWay);
+</script>
