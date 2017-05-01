@@ -2,17 +2,29 @@
 <html lang="en">
     <head>
         <title></title>
+        <style>
+            .big {
+                font-size: 100px;
+                color: orange;
+            }
+        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
     <div id='highlight'>
-     <h1>Testing</h1>   
+     <h1>Testing</h1>
+        <p>Some paragraph</p>   
     </div>        
     </body>
 </html>
 
 <script>
+    var p = document.querySelector('p');
+    p.classList.add('big');
+    p.classList.remove('big');
+    p.classList.toggle('big'); // useful with todo list
+
     //SELECT
     var tag = document.getElementById('highlight');
 
