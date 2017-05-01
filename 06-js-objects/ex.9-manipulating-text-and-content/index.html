@@ -14,4 +14,9 @@
     var tag = document.querySelector('p');
     console.log(tag.textContent);
     console.log(tag.innerHTML);
+
+    document.querySelector('h1').textContent = 'End of this lesson!';
+
+    // document.body.textContent = '<h1>Goodbye!</h1>'; // pure text, doesn't work as html
+    document.body.innerHTML = '<h1>Goodbye!</h1>'; // this works as html
 </script>
