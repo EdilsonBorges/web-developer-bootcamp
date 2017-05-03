@@ -12,20 +12,32 @@
             <li>Anoter item</li>
             <li>One more item</li>
             <p>Not clicked</p>
-            <button type="button">Do it!</button>
         </ul>
+        <button type="button">Do it!</button>
     </body>
 </html>
 <script>
     var tag = document.querySelector('p');
     var button = document.querySelector('button');
-    button.addEventListener('click',function(){
+    
+    button.addEventListener('click',changeBackground);
+    button.addEventListener('click',changeText);
+
+    function changeBackground() {
+        if (document.body.style.background == 'white') {
+            document.body.style.background = 'purple';
+        } else {
+            document.body.style.background = 'white';
+        }
+    }
+
+    function changeText(){
         if (tag.textContent == 'Not clicked') {
-            tag.textContent = 'Clicked'
+            tag.textContent = 'Clicked';
         } else {
             tag.textContent = 'Not clicked';
         }
-    });
+    }
 
     var ul = document.querySelector('ul');
     ul.addEventListener('click',function(){
