@@ -5,13 +5,17 @@ var isPurple = false;
 button.addEventListener('click',changeBackground);
 button.addEventListener('click',changeText);
 
+// function changeBackground() {
+//     if (isPurple) {
+//         document.body.style.background = 'white';
+//     } else {
+//         document.body.style.background = 'purple';
+//     }
+//     isPurple = !isPurple;
+// }
+
 function changeBackground() {
-    if (isPurple) {
-        document.body.style.background = 'white';
-    } else {
-        document.body.style.background = 'purple';
-    }
-    isPurple = !isPurple;
+        document.body.classList.toggle("purple");
 }
 
 function changeText(){
