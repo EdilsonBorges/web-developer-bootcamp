@@ -1,4 +1,8 @@
 var firstLi = document.querySelector('li');
 firstLi.addEventListener('mouseover',function(){
-    console.log('mouse over');
+    firstLi.style.color = 'green';
+});
+
+firstLi.addEventListener('mouseout',function(){
+    firstLi.style.color = 'black';
 });
