@@ -10,15 +10,24 @@ var colors = [
 var squares = document.querySelectorAll('.square');
 var pickedColor = colors[3];
 var span = document.querySelector('span');
+var messageDisplay = document.querySelector('#message');
 span.textContent = pickedColor;
 
 for(i = 0; i < squares.length; i++){
     squares[i].style.background = colors[i];
     squares[i].addEventListener('click',function(){
         if(this.style.background === pickedColor){
-            alert('correct');
+            messageDisplay.textContent = 'Correct!';
+            changeColors(pickedColor);
         } else {
-            alert('wrong')
+            this.style.background = '#232323';
+            messageDisplay.textContent = 'Try Again';
         }
-    })
+    });
+}
+
+function changeColors(color) {
+    for(i = 0; i < squares.length; i++) {
+        squares[i].style.background = color;
+    }
 }
