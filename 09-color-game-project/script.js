@@ -14,4 +14,11 @@ span.textContent = pickedColor;
 
 for(i = 0; i < squares.length; i++){
     squares[i].style.background = colors[i];
+    squares[i].addEventListener('click',function(){
+        if(this.style.background === pickedColor){
+            alert('correct');
+        } else {
+            alert('wrong')
+        }
+    })
 }
