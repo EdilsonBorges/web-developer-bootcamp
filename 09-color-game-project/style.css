@@ -1,5 +1,8 @@
 body {
     background-color: #232323;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
 }
 
 .square {
@@ -8,6 +11,7 @@ body {
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    border-radius: 15%;
 }
 
 #container{
@@ -16,7 +20,13 @@ body {
 }
 
 h1 {
+    padding: 20px 0;
+    text-align: center;
     color:white;
+    line-height: 1.1;
+    background: steelblue;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 #stripe {
@@ -27,4 +37,14 @@ h1 {
 
 .selected {
     background: blue;
+}
+
+#colorDisplay {
+    font-size: 200%;
+}
+
+button {
+    text-transform: uppercase;
+    border: none;
+    background: none;
 }
