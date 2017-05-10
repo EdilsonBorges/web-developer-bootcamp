@@ -36,16 +36,7 @@ function reset() {
 }
 
 resetButton.addEventListener('click',function(){
-    numSquares = 6;
-    colors =  generateRandomColors(numSquares);
-    pickedColor = pickColor();
-    colorDisplay.textContent = pickedColor;
-    this.textContent = 'New Colors';
-    messageDisplay.textContent = '';
-    for(var i = 0; i < squares.length; i++){
-        squares[i].style.background = colors[i];
-    }
-    h1.style.background = "steelblue";
+    reset();
 })
 
 colorDisplay.textContent = pickedColor;
