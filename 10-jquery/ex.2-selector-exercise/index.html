@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+    </head>
+    <body>
+        <h1>jQuery Selector Exercise</h1>
+        <div>Div 1</div>
+        <div class='highlight'>Div 2</div>
+        <div id='third'>Div 3</div>
+        <div class='highlight'>Div 4</div>
+    </body>
+</html>
+<script>
+$('div').css('background','purple');
+$('.highlight').css('width','200px');
+$('#third').css('border','2px orange solid');
+$('div:nth-of-type(1)').css('color','pink')
+</script>
