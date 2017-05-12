@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+</head>
+<body>
+<h1>Events</h1>
+<button>Don't click</button>
+<button>Don't click 2</button>
+<button>Don't click 3</button>
+</body>
+</html>
+<script>
+    $('h1').click(function(){
+        alert('h1 clicked');
+    })
+    $('button').click(function(){
+        $(this).css('background','pink')
+        console.log('You clicked'+$(this).text());
+    })
+</script>
