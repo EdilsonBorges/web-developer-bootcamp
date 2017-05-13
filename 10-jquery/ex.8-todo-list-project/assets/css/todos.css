@@ -11,3 +11,12 @@ body {
 li {
     cursor: pointer;
 }
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.removed {
+    display: none;
+}
