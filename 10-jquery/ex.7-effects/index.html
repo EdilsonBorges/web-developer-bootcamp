@@ -9,24 +9,26 @@
             width: 100px;
             height: 100px;
             background: teal;
-            float: left;
+            float: center;
             margin: 20px;
         }
         </style>
     </head>
     <body>
     <h1>Teste effect</h1>
+    <button>Click</button>
         <div>One</div>
         <div>Two</div>
         <div>Three</div>
-    <button>Click</button>
     </body>
 </html>
 <script>
 $('button').on('click', function(){
-    $('div').fadeOut(1000, function(){
-        $(this).remove();
-        console.log('fade completed');
+    $('div').fadeToggle(1000, function(){
+        console.log('toggle completed');
+    });
+    $('div').slideToggle(1000, function(){
+        console.log('toggle completed');
     });
 })
 </script>
