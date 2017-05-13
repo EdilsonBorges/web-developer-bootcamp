@@ -1,3 +1,13 @@
 body {
-    background: purple;
+    background: white;
+}
+
+#container {
+    border: 1px solid gray;
+    width: 360px;
+    margin: 0 auto;
+}
+
+li {
+    cursor: pointer;
 }
