@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+        <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: teal;
+            float: left;
+            margin: 20px;
+        }
+        </style>
+    </head>
+    <body>
+    <h1>Teste effect</h1>
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    <button>Click</button>
+    </body>
+</html>
+<script>
+$('button').on('click', function(){
+    $('div').fadeOut(1000, function(){
+        $(this).remove();
+        console.log('fade completed');
+    });
+})
+</script>
