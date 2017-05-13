@@ -7,6 +7,8 @@
 </head>
 <body>
 <h1>Events</h1>
+<h1>Events</h1>
+<h1>Events</h1>
 <input type="text" name="" value="">
 <button>Don't click</button>
 <button>Don't click 2</button>
@@ -14,9 +16,6 @@
 </body>
 </html>
 <script>
-    $('h1').click(function(){
-        alert('h1 clicked');
-    })
     $('button').click(function(){
         $(this).css('background','pink')
         console.log('You clicked'+$(this).text());
@@ -26,5 +25,17 @@
         if (test.which === 13){
             alert('enter!');
         }
+    })
+    $('h1').on('click',function(){
+        $(this).css('color','purple');
+    })
+    $('h1').on('mouseover',function(){
+        $(this).css('color','red');
+    })
+    $('button').on('mouseenter',function(){
+        $(this).css('font-weight','bold');
+    })
+    $('button').on('mouseleave',function(){
+        $(this).css('font-weight','normal');
     })
 </script>
