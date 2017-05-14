@@ -1,9 +1,9 @@
 
-$('li').on('click',function(){
+$('ul').on('click', 'li', function(){
     $(this).toggleClass('completed');
 });
 
-$('span').on('click',function(e){
+$('ul').on('click', 'span', function(e){
     // $(this).parent().toggleClass('removed');
     $(this).parent().fadeOut(300,function(){
         $(this).toggleClass('removed');
@@ -14,9 +14,9 @@ $('span').on('click',function(e){
 //include all li to hide with parent()
 
 $("input[type='text']").keypress(function(e){
-    if (e.which === 13) {
+    if (e.which === 13 && $(this).val() !== '') {
         var todoText = $(this).val();
         $(this).val('');
-        $('ul').append('<li>'+todoText+'</li:>');
+        $('ul').append('<li><span>X</span> '+todoText+'</li:>');
     }
 })
