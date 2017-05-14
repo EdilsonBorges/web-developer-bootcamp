@@ -1,5 +1,10 @@
 body {
-    background: white;
+    background: #2BC0E4;  /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(left, #EAECC6, #2BC0E4);
+    background: -moz-linear-gradient(left, #EAECC6, #2BC0E4);
+    background: -o-linear-gradient(left, #EAECC6, #2BC0E4);
+    background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
