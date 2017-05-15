@@ -34,6 +34,11 @@ li:hover span {
     opacity: 1.0;
 }
 
+.fa-plus {
+    float: right;
+    cursor: pointer;
+}
+
 #container {
     border: 0px solid gray;
     background: #f7f7f7;
