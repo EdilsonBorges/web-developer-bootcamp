@@ -17,6 +17,23 @@ h1 {
     margin: 0;
 }
 
+span {
+    background: #e74c3c;
+    color: white;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    width: 0px;
+    display: inline-block;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
+}
+
 #container {
     border: 0px solid gray;
     background: #f7f7f7;
@@ -38,6 +55,7 @@ input {
     width: 100%;
     color: #2980b9;
     box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
 input:focus {
