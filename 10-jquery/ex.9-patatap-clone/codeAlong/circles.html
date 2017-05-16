@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Circle</title>
-        <script type="text/javascript" src="paper-full.js"></script>
-        <link rel="stylesheet" type="" href="circles.css">
-        <script type="text/paperscript" canvas="myCanvas">
-            x = 0;
-            y = 0;
-            for(i = 0; i < 10; i++){
-                for(j = 0; j < 10; j++){
-                    var circle = new Path.Circle(new Point(x, y), 10);
-                    circle.fillColor = 'purple';
-                    y += 100;
-                }
-                x += 100;
-                y = 0;
+    <title>Circle</title>
+    <script type="text/javascript" src="paper-full.js"></script>
+    <link rel="stylesheet" type="" href="circles.css">
+    <script type="text/paperscript" canvas="myCanvas">
+        for(x = 0; x < 1000; x+=100){
+            for(y = 0; y < 1000; y+=100){
+                new Path.Circle(new Point(x, y), 10).fillColor = 'purple';
             }
-        </script>
-    </head>
+        }
+    </script>
+</head>
     <body>
         <canvas id="myCanvas" resize></canvas>
     </body>
