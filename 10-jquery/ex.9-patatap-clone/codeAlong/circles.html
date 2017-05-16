@@ -5,14 +5,17 @@
         <script type="text/javascript" src="paper-full.js"></script>
         <link rel="stylesheet" type="" href="circles.css">
         <script type="text/paperscript" canvas="myCanvas">
-            var path = new Path();
-            path.strokeColor = 'white';
-            var start = new Point(200, 100);
-            path.moveTo(start);
-            path.lineTo(start + [ 100, -50 ]);
-
-            var circle = new Path.Circle(new Point(100, 70), 60);
-            circle.fillColor = 'purple';
+            x = 0;
+            y = 0;
+            for(i = 0; i < 10; i++){
+                for(j = 0; j < 10; j++){
+                    var circle = new Path.Circle(new Point(x, y), 10);
+                    circle.fillColor = 'purple';
+                    y += 100;
+                }
+                x += 100;
+                y = 0;
+            }
         </script>
     </head>
     <body>
