@@ -3,12 +3,14 @@
     <head>
         <title>Todo List</title>
         <link rel="stylesheet" type="text/css" href="assets/css/patatap.css">
-        <script type="text/javascript" src="assets/js/lib/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="codeAlong/paper-full.js"></script>
+        <script type="text/paperscript" canvas="myCanvas">
+        function onKeyDown(event){
+            new Path.Circle(new Point(100,100),10).fillColor = "orange"
+        }
+    </script>
     </head>
     <body>
-    <div id='container'>
-        <h1>Patatap Clone</h1>
-    </div>
-    <script type="text/javascript" src="assets/js/patatap.js"></script>
+        <canvas id="myCanvas" resize></canvas>
     </body>
 </html>
