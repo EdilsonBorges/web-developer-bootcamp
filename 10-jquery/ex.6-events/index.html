@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+</head>
+<body>
+<h1>Events</h1>
+<h1>Events</h1>
+<h1>Events</h1>
+<input type="text" name="" value="">
+<button>Don't click</button>
+<button>Don't click 2</button>
+<button>Don't click 3</button>
+</body>
+</html>
+<script>
+    $('button').click(function(){
+        $(this).css('background','pink')
+        console.log('You clicked'+$(this).text());
+    })
+    $('input').keypress(function(test){
+        console.log(test)
+        if (test.which === 13){
+            alert('enter!');
+        }
+    })
+    $('h1').on('click',function(){
+        $(this).css('color','purple');
+    })
+    $('h1').on('mouseover',function(){
+        $(this).css('color','red');
+    })
+    $('button').on('mouseenter',function(){
+        $(this).css('font-weight','bold');
+    })
+    $('button').on('mouseleave',function(){
+        $(this).css('font-weight','normal');
+    })
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+</head>
+<body>
+<h1>jQuery Methods Demo Page</h1>
+<input type="text" placeholder="your name">
+
+<select>
+    <option>One</option>
+    <option>Two</option>
+    <option>Three</option>
+</select>
+
+<ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+
+<img src="http://i.imgur.com/skSpO.jpg">
+<img src="http://i.imgur.com/skSpO.jpg">
+<img src="http://i.imgur.com/skSpO.jpg">
+
+</html>
+<script>
+$('img').css('width','200px')
+$('img').attr('src','http://i.imgur.com/Cxagvg.jpg')
+$('input').attr('type','text') // color, checkbox, etc
+$('img:first-of-type').attr('src','http://i.imgur.com/skSpO.jpg')
+$('img').last().attr('src','http://i.imgur.com/skSpO.jpg');
+$('img').attr('src','http://i.imgur.com/skSpO.jpg');
+$('input').val();
+$('select').val();
+$('option').val();
+</script>

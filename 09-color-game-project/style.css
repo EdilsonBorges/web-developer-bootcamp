@@ -1,5 +1,8 @@
 body {
     background-color: #232323;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
 }
 
 .square {
@@ -8,13 +11,63 @@ body {
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    cursor: pointer;
+    border-radius: 15%;
+    transition: background 600ms;
+    -webkit-transition: background 600ms;
+    -moz-transition: background 600ms;
 }
 
 #container{
-    margin: 0 auto;
+    margin: 20px auto;
     max-width: 600px;
 }
 
 h1 {
+    padding: 20px 0;
+    text-align: center;
     color:white;
+    line-height: 1.1;
+    background: steelblue;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#stripe {
+    background:white;
+    height: 30px;
+    text-align: center;
+}
+
+.selected {
+    background: steelblue;
+    color: white;
+}
+
+#colorDisplay {
+    font-size: 200%;
+}
+
+button {
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 0.5px;
+    transition: all 300ms;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+}
+
+button:hover {
+    color: white;
+    background: steelblue;
 }

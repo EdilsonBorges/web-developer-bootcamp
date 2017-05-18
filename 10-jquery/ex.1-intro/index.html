@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="lib/jquery.js"></script>
+        <!-- jQuery CDN<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
+    </head>
+    <body>
+    <h1>jQuery demo</h1>
+    <ul>
+        <li>one</li>
+        <li>two <a href="##">some link</a></li>
+        <li>three</li>
+    </ul>
+    </body>
+</html>
+<script>
+$('h1')
+$('li')
+$('a')
+$('li a')
+$('ul li a')
+$('h1').css('color', 'yellow')
+
+var styles = {
+    color: 'red',
+    background: 'pink',
+    border: '2px solid purple'
+}
+$('h1').css(styles)
+$('a').css('font-size','40px')
+
+$('li').css({
+	fontSize: '60px',
+	border: '3px dashed purple',
+	background: 'rgba(89, 45, 20, 0.5)'
+})
+</script>

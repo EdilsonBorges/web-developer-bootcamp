@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+        <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: teal;
+            float: center;
+            margin: 20px;
+        }
+        </style>
+    </head>
+    <body>
+    <h1>Teste effect</h1>
+    <button>Click</button>
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    </body>
+</html>
+<script>
+$('button').on('click', function(){
+    $('div').fadeToggle(1000, function(){
+        console.log('toggle completed');
+    });
+    $('div').slideToggle(1000, function(){
+        console.log('toggle completed');
+    });
+})
+</script>
