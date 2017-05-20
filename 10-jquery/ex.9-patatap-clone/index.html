@@ -13,6 +13,10 @@
             var newCircle = new Path.Circle(point, 500);
             newCircle.fillColor = "orange";
             circles.push(newCircle);
+            
+            var newSquare = new Path.Square(point, 250);
+            newSquare.fillColor = "red";
+            circles.push(newSquare);
         }
 
         function onFrame(event){
