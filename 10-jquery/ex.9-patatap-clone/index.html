@@ -7,12 +7,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
         <script type="text/paperscript" canvas="myCanvas">
         var sound = new Howl({
-            src: ['codeAlong/sounds/sound1.mp3']
+            src: ['codeAlong/sounds/bubbles.mp3']
             });
-        <!--sound.play();-->
 
         var circles = [];
         function onKeyDown(event){
+            sound.play();
             var maxPoint = new Point(view.size.width, view.size.height);
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
