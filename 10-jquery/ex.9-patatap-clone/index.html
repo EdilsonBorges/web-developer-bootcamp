@@ -15,19 +15,21 @@
 
         var circles = [];
         function onKeyDown(event){
-            if(event.key === 'a'){
-                sound1.play();
-            }
-            if(event.key === 's'){
-                sound2.play();
-            }
             var maxPoint = new Point(view.size.width, view.size.height);
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
             var newCircle = new Path.Circle(point, 500);
-            newCircle.fillColor = "orange";
-            circles.push(newCircle);
-            
+            if(event.key === 'a'){
+                sound1.play();
+                newCircle.fillColor = "purple";
+            }
+            else if(event.key === 's'){
+                sound2.play();
+                newCircle.fillColor = "#16a085";
+            } else {
+                newCircle.fillColor = "orange";
+            }
+            circles.push(newCircle);        
             var newSquare = new Path.Square(point, 250);
             newSquare.fillColor = "red";
             circles.push(newSquare);
