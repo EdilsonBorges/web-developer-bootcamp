@@ -6,33 +6,40 @@
         <script type="text/javascript" src="codeAlong/paper-full.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
         <script type="text/paperscript" canvas="myCanvas">
-        var sound1 = new Howl({
-            src: ['codeAlong/sounds/bubbles.mp3']
-            });
-        var sound2 = new Howl({
-            src: ['codeAlong/sounds/clay.mp3']
-            });
+
+        var keyData = {
+            a: {
+                color: "purple",
+                sound: new Howl({
+                    src: ['codeAlong/sounds/bubbles.mp3']
+                })
+            },
+            s: {
+                color: "#16a085",
+                sound: new Howl({
+                    src: ['codeAlong/sounds/clay.mp3']
+                })
+            },
+            d: {
+                color: "green",
+                sound: new Howl({
+                    src: ['codeAlong/sounds/confetti.mp3']
+                })
+            }
+        }
 
         var circles = [];
+
         function onKeyDown(event){
-            var maxPoint = new Point(view.size.width, view.size.height);
-            var randomPoint = Point.random();
-            var point = maxPoint * randomPoint;
-            var newCircle = new Path.Circle(point, 500);
-            if(event.key === 'a'){
-                sound1.play();
-                newCircle.fillColor = "purple";
+            if(keyData[event.key]){
+                var maxPoint = new Point(view.size.width, view.size.height);
+                var randomPoint = Point.random();
+                var point = maxPoint * randomPoint;
+                var newCircle = new Path.Circle(point, 500);
+                newCircle.fillColor = keyData[event.key].color;
+                keyData[event.key].sound.play();
+                circles.push(newCircle);
             }
-            else if(event.key === 's'){
-                sound2.play();
-                newCircle.fillColor = "#16a085";
-            } else {
-                newCircle.fillColor = "orange";
-            }
-            circles.push(newCircle);        
-            var newSquare = new Path.Square(point, 250);
-            newSquare.fillColor = "red";
-            circles.push(newSquare);
         }
 
         function onFrame(event){
