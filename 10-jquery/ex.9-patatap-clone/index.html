@@ -6,13 +6,21 @@
         <script type="text/javascript" src="codeAlong/paper-full.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
         <script type="text/paperscript" canvas="myCanvas">
-        var sound = new Howl({
+        var sound1 = new Howl({
             src: ['codeAlong/sounds/bubbles.mp3']
+            });
+        var sound2 = new Howl({
+            src: ['codeAlong/sounds/clay.mp3']
             });
 
         var circles = [];
         function onKeyDown(event){
-            sound.play();
+            if(event.key === 'a'){
+                sound1.play();
+            }
+            if(event.key === 's'){
+                sound2.play();
+            }
             var maxPoint = new Point(view.size.width, view.size.height);
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
