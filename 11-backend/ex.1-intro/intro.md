@@ -21,3 +21,15 @@ Python          ||   nginx    ||  postgresql
 
 HTML JS CSS         ->  reddit.com
 (Backbone)
+
+
+Course's Stack
+
+                ||            ||
+Node JS         ||   Express  ||  MongoDB
+                ||            ||  
+
+        |
+        V
+
+HTML JS CSS         ->  index.html
