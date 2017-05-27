@@ -1,1 +1,1 @@
-// exercise3
+var lower = require('./lower.js');
