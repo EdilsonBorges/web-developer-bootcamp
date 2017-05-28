@@ -13,3 +13,9 @@ app.get('/dog',function(req, res){
 app.listen('3000',function(){
     console.log('server started on por 3000')
 })
+
+/*
+npm init
+npm install cat-me --save
+npm uninstall cat-me --save
+*/
