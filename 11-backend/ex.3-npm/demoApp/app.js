@@ -1,2 +1,2 @@
-var cat = require('cat-me');
-console.log(cat());
+var kkj = require('knock-knock-jokes');
+console.log(kkj());
