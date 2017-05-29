@@ -10,6 +10,9 @@ app.get('/bye',function(req, res){
 app.get('/dog',function(req, res){
     console.log('request on dog'),res.send('Meow!')
 })
+app.get('*',function(req, res){
+    console.log('request on star'),res.send('You are a star!')
+})
 app.listen('3000',function(){
     console.log('server started on por 3000')
 })
