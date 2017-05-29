@@ -7,6 +7,9 @@ app.get('/',function(req, res){
 app.get('/r/:subrreditName',function(req, res){
     console.log('request on r'), res.send('Welcome to subreddit!')
 })
+app.get('/r/:subrreditName/comments/:id/:title',function(req, res){
+    console.log('request on comment'), res.send('Welcome to subreddit comment!')
+})
 app.get('/bye',function(req, res){
     console.log('request on bye'), res.send('Good bye!')
 })
@@ -29,4 +32,8 @@ npm uninstall cat-me --save
 /*
 The order of routes matters. The * route has to be at the end.
 dry: don't repeat yourself
+*/
+
+/*
+http://localhost:3000/r/soccer/comments/123/my_first_soccer_game
 */
