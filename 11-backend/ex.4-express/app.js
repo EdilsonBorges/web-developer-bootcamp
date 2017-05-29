@@ -5,10 +5,10 @@ app.get('/',function(req, res){
     console.log('request on root'),res.send('Hi there!')
 })
 app.get('/r/:subrreditName',function(req, res){
-    console.log('request on r'), res.send('Welcome to subreddit!')
+    console.log(req.params), res.send('Welcome to subreddit!')
 })
 app.get('/r/:subrreditName/comments/:id/:title',function(req, res){
-    console.log('request on comment'), res.send('Welcome to subreddit comment!')
+    console.log(req.params), res.send('Welcome to subreddit comment!')
 })
 app.get('/bye',function(req, res){
     console.log('request on bye'), res.send('Good bye!')
