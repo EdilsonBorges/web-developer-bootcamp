@@ -156,5 +156,14 @@
   },
   "closureWhitelist": [
     "mdc-animation"
-  ]
+  ],
+  "name": "ex14.material-components-web",
+  "version": "1.0.0",
+  "main": "closure_externs.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "keywords": [],
+  "author": ""
 }
