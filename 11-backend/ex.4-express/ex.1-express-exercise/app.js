@@ -1,28 +1,32 @@
 var app = require('express')()
 
-app.get('/', function(res,req){
-    console.log('welcome')
+app.get('/', function(req, res){
+    res.send('welcome')
 })
 
-app.get('/speak/:term', function(res,req){
-    if (res.params.term == 'pig') {
-        console.log('The pig')
-    } else if (res.params.term == 'cow') {
-        console.log('The cow')
-    } else if (res.params.term == 'dog') {
-        console.log('The dog')
+app.get('/speak/:term', function(req, res){
+    var sound = {
+        pig: 'Oink',
+        cow: 'Moo',
+        dog: 'Woof Woof!'
     }
+    res.send('The ' + req.params.term + ' says '+
+        sound[req.params.term]
+    )
 })
 
-app.get('/repeat/:term/:number',function(res,req){
-    var num = res.params.number
-    for(var i = 0; i < num; i++){
-        console.log(res.params.term)
+app.get('/repeat/:term/:times',function(req, res){
+    var term = req.params.term
+    var times = req.params.times
+    var result = ''
+    for(var i = 0; i < times; i++){
+        result += term + ' '
     }
+    res.send(result)
 })
 
-app.get('*', function(res,req){
-    console.log('404')
+app.get('*', function(req, res){
+    res.send('404 - page not found')
 })
 
 app.listen('3000')
