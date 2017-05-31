@@ -5,9 +5,10 @@ app.get('/', function(req, res){
     res.render('home.ejs')
 })
 
-app.get('/love/:thing', function(req, res){
+app.get('/love/:thing/:id', function(req, res){
     var thing = req.params.thing
-    res.render('love.ejs', {thingVar: thing})
+    var id = req.params.id
+    res.render('love.ejs', {thingVar: thing, idVar: id})
 })
 
 app.listen('3000', function(){
