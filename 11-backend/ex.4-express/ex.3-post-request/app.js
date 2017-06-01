@@ -5,17 +5,19 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.set('view engine', 'ejs')
 
+var friends = ['Ted', 'Barney','Marshall', 'Robin', 'Lily']
+
 app.get('/', function(req, res){
     res.render('home')
 })
 
 app.post('/addfriend', function(req, res){
-    console.log(req.body)
-    res.send('post route')
+    var newfriend = req.body.newfriend
+    friends.push(newfriend)
+    res.redirect('/friends')
 })
 
 app.get('/friends',function(req, res){
-    var friends = ['Ted', 'Barney','Marshall', 'Robin', 'Lily']
     res.render('friends', {friends: friends})
 })
 
