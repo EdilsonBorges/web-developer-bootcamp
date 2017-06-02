@@ -4,7 +4,9 @@ request('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather
         console.log('something went wrong: '+error)
     } else {
         if(response.statusCode == 200){
-            console.log('it worked: '+body)
+            var parsedData = JSON.parse(body)
+            console.log('Sunset in Hawaii is at...')
+            console.log(parsedData['query']['results']['channel']['astronomy']['sunset'])
         }
     }
 })
