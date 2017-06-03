@@ -16,7 +16,6 @@ app.get('/', function(req, res){
 })
 
 app.get('/campgrounds', function(req, res){
-    // var results = JSON.parse(campgrounds)
     res.render('campgrounds', {campgrounds: campgrounds})
 })
 
