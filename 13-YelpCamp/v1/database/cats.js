@@ -9,11 +9,11 @@ var catSchema = new mongoose.Schema({
 
 var Cat = mongoose.model('Cat', catSchema)
 
-var newCat = new Cat({
-    name: 'Mrs. Norris',
-    age: 7,
-    temperament: 'Evil'
-})
+// var newCat = new Cat({
+//     name: 'Mrs. Norris',
+//     age: 7,
+//     temperament: 'Evil'
+// })
 
 // newCat.save(function(err, cat){
 //     if(err){
@@ -24,12 +24,26 @@ var newCat = new Cat({
 //     }
 // })
 
-Cat.find({}, function(err, cats){
+// Cat.find({}, function(err, cats){
+//     if(err){
+//         console.log('Error!')
+//         console.log(err)
+//     } else {
+//         console.log('All the cats:')
+//         console.log(cats)
+//     }
+// })
+
+Cat.create({
+    name: 'Snow White',
+    age: 15,
+    temperament: 'Bland'
+}, function(err, cats){
     if(err){
         console.log('Error!')
         console.log(err)
     } else {
-        console.log('All the cats:')
+        console.log('Success!!')
         console.log(cats)
     }
 })
