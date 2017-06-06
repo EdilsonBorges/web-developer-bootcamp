@@ -8,13 +8,16 @@ app.set('view engine', 'ejs')
 
 var campgroundSchema = new mongoose.Schema({
     name: String,
-    image: String
+    image: String,
+    description: String
 })
 
 var Campground = mongoose.model('Campground', campgroundSchema)
 
+// db.campgrounds.drop()
+
 // Campground.create(
-//     { name: 'Camp 1', image: 'http://nationalhomegrantfoundation.com/wp-content/uploads/2015/12/Scout-Camp.jpg' },
+//     { name: 'Camp 1', image: 'http://nationalhomegrantfoundation.com/wp-content/uploads/2015/12/Scout-Camp.jpg', description:'This is a huge granite hill!' },
 //     { name: 'Camp 2', image: 'http://www.travelbirbilling.com/wp-content/uploads/camp-pic1.jpg' },
 //     { name: 'Camp 3', image: 'http://blog.via.com/wp-content/uploads/2015/12/Thanedar-Himachal-Pradesh.jpg' },
 //     { name: 'Camp 4', image: 'https://media-cdn.tripadvisor.com/media/photo-s/0a/88/1c/a1/camp-oak-view.jpg' }
@@ -56,6 +59,10 @@ app.post('/campgrounds', function(req, res){
 
 app.get('/campgrounds/new', function(req, res){
     res.render('new')
+})
+
+app.get('/campgrounds/:id', function(req, res){
+    console.log('yelp camp!')
 })
 
 app.listen('3000', function(){
