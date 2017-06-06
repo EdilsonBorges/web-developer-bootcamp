@@ -39,7 +39,7 @@ app.get('/campgrounds', function(req, res){
         if(err){
             console.log(err)
         } else {
-            res.render('campgrounds', {campgrounds: allcampgrounds})
+            res.render('index', {campgrounds: allcampgrounds})
         }
     })
 })
@@ -62,7 +62,13 @@ app.get('/campgrounds/new', function(req, res){
 })
 
 app.get('/campgrounds/:id', function(req, res){
-    console.log('yelp camp!')
+    Campground.findById(req.params.id, function(err, foundCampground){
+        if(err){
+            console.log(err)
+        } else{
+            res.render('show', {campground: foundCampground})
+        }
+    })
 })
 
 app.listen('3000', function(){
