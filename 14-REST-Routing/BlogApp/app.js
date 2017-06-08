@@ -17,10 +17,22 @@ var blogSchema = new mongoose.Schema({
     created: {type: Date, default: Date.now}
 })
 var Blog = mongoose.model('Blog', blogSchema)
+{}
+// Blog.create({
+//     title: 'Test',
+//     image: 'http://jj-bg.info/gallery/album_1/min/test.png',
+//     body: 'some thing'
+// })
 
 // RESTful Routes
 app.get(['/','/blogs'], function(req, res){
-    res.render('index')
+    Blog.find({}, function(err, blogs){
+        if(err){
+            console.log(err)
+        } else {
+            res.render('index', {blogs: blogs})
+        }
+    })
 })
 
 app.listen('3000', function(){
