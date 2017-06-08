@@ -54,6 +54,16 @@ app.get('/blogs/:id', function(req, res){
     })
 })
 
+app.get('/blogs/:id/edit', function(req, res){
+    Blog.findById(req.params.id, function(err, editBlog){
+        if(err){
+            res.redirect('/blogs')
+        } else {
+           res.render('edit', {blog: editBlog}) 
+        }
+    })
+})
+
 app.listen('3000', function(){
     console.log('Server Running')
 })
