@@ -1,13 +1,6 @@
 var mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/blog_demo')
 
-// USER - email, name
-var userSchema = new mongoose.Schema({
-    email: String,
-    name: String
-})
-var User = mongoose.model("User", userSchema)
-
 // POST - title, content
 var postSchema = new mongoose.Schema({
     title: String,
@@ -15,28 +8,41 @@ var postSchema = new mongoose.Schema({
 })
 var Post = mongoose.model("Post", postSchema)
 
-// var newUser = new User({
-//     email: "charlie@brown.edu",
-//     name: "Charlie Brown"
-// })
+// USER - email, name
+var userSchema = new mongoose.Schema({
+    email: String,
+    name: String,
+    posts: [postSchema]
+})
+var User = mongoose.model("User", userSchema)
 
-// newUser.save(function(err, user){
-//     if(err){
-//         console.log(err)
-//     } else{
-//         console.log(user)
-//     }
-// })
-
-var newPost = new Post({
-    title: "Reflections os Apples",
-    content: "They are delicious"
+var newUser = new User({
+    email: "hermione@hogwarts.edu",
+    name: "Hermione Granger"
 })
 
-newPost.save(function(err, post){
+newUser.posts.push({
+    title: "How to bre potion",
+    content: "Just kidding"
+})
+
+newUser.save(function(err, user){
     if(err){
         console.log(err)
     } else{
-        console.log(post)
+        console.log(user)
     }
 })
+
+// var newPost = new Post({
+//     title: "Reflections os Apples",
+//     content: "They are delicious"
+// })
+
+// newPost.save(function(err, post){
+//     if(err){
+//         console.log(err)
+//     } else{
+//         console.log(post)
+//     }
+// })
