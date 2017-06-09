@@ -20,7 +20,17 @@ User.findOne({name: "Hermione Granger"}, (function(err, user){
         if(err){
             console.log(err)
         } else{
-            console.log(user)
+            user.posts.push({
+                title: "3 Thing I really hate",
+                content: "Voldemort. Voldemort. Voldemort."
+            })
+            user.save(function(err, user){
+                if(err){
+                    console.log(err)
+                } else{
+                    console.log(user)
+                }
+            })
         }
     })
 )
