@@ -16,23 +16,32 @@ var userSchema = new mongoose.Schema({
 })
 var User = mongoose.model("User", userSchema)
 
-var newUser = new User({
-    email: "hermione@hogwarts.edu",
-    name: "Hermione Granger"
-})
+User.findOne({name: "Hermione Granger"}, (function(err, user){
+        if(err){
+            console.log(err)
+        } else{
+            console.log(user)
+        }
+    })
+)
 
-newUser.posts.push({
-    title: "How to bre potion",
-    content: "Just kidding"
-})
+// var newUser = new User({
+//     email: "hermione@hogwarts.edu",
+//     name: "Hermione Granger"
+// })
 
-newUser.save(function(err, user){
-    if(err){
-        console.log(err)
-    } else{
-        console.log(user)
-    }
-})
+// newUser.posts.push({
+//     title: "How to bre potion",
+//     content: "Just kidding"
+// })
+
+// newUser.save(function(err, user){
+//     if(err){
+//         console.log(err)
+//     } else{
+//         console.log(user)
+//     }
+// })
 
 // var newPost = new Post({
 //     title: "Reflections os Apples",
