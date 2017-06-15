@@ -18,7 +18,7 @@ function seedDB() {
             console.log('Removed campgrounds!');
             //Add a few campgrounds
             data.forEach(function(seed){
-                Campground.create(seed, function(err){
+                Campground.create(seed, function(err, campground){
                     if(err){
                         console.log(err);
                     } else {
@@ -28,7 +28,7 @@ function seedDB() {
                             {
                                 text: 'This place is great but should have internet',
                                 author: 'Homer'
-                            }, function(err){
+                            }, function(err, comment){
                                 if(err){
                                     console.log(err);
                                 } else {
