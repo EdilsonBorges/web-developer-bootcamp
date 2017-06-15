@@ -2,27 +2,13 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    Campground = require('./models/campground')
+    Campground = require('./models/campground'),
+    seedDB = require ('./seeds')
 
-mongoose.connect('mongodb://localhost/yelp_camp')
-app.use(bodyParser.urlencoded({extended: true}))
-app.set('view engine', 'ejs')
-
-// db.campgrounds.drop()
-
-// Campground.create(
-//     { name: 'Camp 1', image: 'http://nationalhomegrantfoundation.com/wp-content/uploads/2015/12/Scout-Camp.jpg', description:'This is a huge granite hill!' },
-//     { name: 'Camp 2', image: 'http://www.travelbirbilling.com/wp-content/uploads/camp-pic1.jpg' },
-//     { name: 'Camp 3', image: 'http://blog.via.com/wp-content/uploads/2015/12/Thanedar-Himachal-Pradesh.jpg' },
-//     { name: 'Camp 4', image: 'https://media-cdn.tripadvisor.com/media/photo-s/0a/88/1c/a1/camp-oak-view.jpg' }
-//     , function(err, campground){
-//     if(err){
-//         console.log(err)
-//     } else {
-//         console.log('Newly created campground')
-//         console.log(campground)
-//     }
-// })
+seedDB();
+mongoose.connect('mongodb://localhost/yelp_camp');
+app.use(bodyParser.urlencoded({extended: true}));
+app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
     res.render('landing')
