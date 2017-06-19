@@ -10,7 +10,11 @@ mongoose.connect('mongodb://localhost/auth_demo_app');
 
 var app = express();
 app.set('view engine', 'ejs');
-
+app.use(require('express-session')({
+    secret: 'Some Random Text',
+    resave: false,
+    saveUninitialized: false
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
