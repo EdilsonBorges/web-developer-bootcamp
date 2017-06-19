@@ -11,6 +11,9 @@ mongoose.connect('mongodb://localhost/auth_demo_app');
 var app = express();
 app.set('view engine', 'ejs');
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.get('/', function (req, res){
     res.render('home');
 });
