@@ -9,6 +9,8 @@ var express = require('express'),
     User = require('./models/user'),
     seedDB = require ('./seeds')
 
+var commentRoutes = require('./routes/comments');
+
 seedDB();
 mongoose.connect('mongodb://localhost/yelp_camp');
 app.use(bodyParser.urlencoded({extended: true}));
