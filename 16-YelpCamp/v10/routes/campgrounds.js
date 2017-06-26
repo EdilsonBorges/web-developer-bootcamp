@@ -70,6 +70,11 @@ router.put('/:id', function(req, res){
     });
 });
 
+//Destroy campground routea
+router.delete('/:id', function(req, res){
+    res.send('delete');
+});
+
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
