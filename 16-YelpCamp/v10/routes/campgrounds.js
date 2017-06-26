@@ -49,6 +49,10 @@ router.get('/:id', function(req, res){
     })
 });
 
+//Edit Campgruond
+
+//Update Campground route
+
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
