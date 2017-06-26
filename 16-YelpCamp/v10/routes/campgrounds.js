@@ -50,7 +50,9 @@ router.get('/:id', function(req, res){
 });
 
 //Edit Campgruond
-
+router.get('/:id/edit', function(req, res){
+    res.send('testing edit');
+});
 //Update Campground route
 
 function isLoggedIn(req, res, next){
