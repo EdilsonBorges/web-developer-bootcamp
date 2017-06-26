@@ -49,9 +49,9 @@ router.get('/:id', function(req, res){
     })
 });
 
-//Edit Campgruond
+//Edit Campground
 router.get('/:id/edit', function(req, res){
-    res.send('testing edit');
+    res.render('campgrounds/edit');
 });
 //Update Campground route
 
