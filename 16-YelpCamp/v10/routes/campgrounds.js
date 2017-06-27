@@ -51,6 +51,21 @@ router.get('/:id', function(req, res){
 
 //Edit Campground
 router.get('/:id/edit', function(req, res){
+    if(req.isAuthenticated()){
+        Campground.findById(req.params.id, function(err, foundCampground){
+            if(err){
+                res.redirect('/campgrounds');
+            } else {
+                if(foundCampground.author.id.equals(req.user._id)){
+                    res.render('campgrounds/edit', {campground: foundCampground});
+                } else {
+                    res.send('you do not have permission');
+                }
+            }
+        });
+    } else {
+        console.log('test');
+    }
     Campground.findById(req.params.id, function(err, foundCampground){
         if(err){
             res.redirect('/campgrounds');
