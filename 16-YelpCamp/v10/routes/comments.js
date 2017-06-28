@@ -38,6 +38,10 @@ router.post('/', isLoggedIn, function(req, res){
     })
 });
 
+router.get('/comments_id/edit', function(req, res){
+    res.send('edit route for comment');
+});
+
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
