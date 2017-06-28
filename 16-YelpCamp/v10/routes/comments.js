@@ -38,8 +38,8 @@ router.post('/', isLoggedIn, function(req, res){
     })
 });
 
-router.get('/comments_id/edit', function(req, res){
-    res.send('edit route for comment');
+router.get('/:comment_id/edit', function(req, res){
+    res.render('comments/edit');
 });
 
 function isLoggedIn(req, res, next){
