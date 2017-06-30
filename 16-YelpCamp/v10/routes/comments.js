@@ -58,6 +58,10 @@ router.put('/:comment_id', function(req, res){
     });
 });
 
+router.delete('/:comment_id', function(req, res){
+    res.send('destroy comment');
+});
+
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
