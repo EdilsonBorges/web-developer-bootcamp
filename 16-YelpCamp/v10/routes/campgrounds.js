@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Campground = require('../models/campground');
+var middleware = require('../middleware');
 
 router.get('/', function(req, res){
     Campground.find({}, function(err, allcampgrounds){
@@ -80,12 +81,5 @@ router.delete('/:id', checkCampgroundOwnership, function(req, res){
         }
     });
 });
-
-function isLoggedIn(req, res, next){
-    if(req.isAuthenticated()){
-        return next();
-    }
-    res.redirect('/login');
-};
 
 module.exports = router;
