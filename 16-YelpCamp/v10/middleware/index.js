@@ -1,6 +1,6 @@
 var middlewareObj = {};
 
-middlewareObj.checkCampgroundOwnershipt = function(req, res, next){
+middlewareObj.checkCampgroundOwnership = function(req, res, next){
     if(req.isAuthenticated()){
         Campground.findById(req.params.id, function(err, foundCampground){
             if(err){
@@ -36,7 +36,6 @@ middlewareObj.checkCommentOwnership = function(req, res, next){
     }
 }
 
-
 middlewareObj.isLoggedIn = function(req, res, next){
     if(req.isAuthenticated()){
         return next();
@@ -44,5 +43,4 @@ middlewareObj.isLoggedIn = function(req, res, next){
     res.redirect('/login');
 };
 
-
-module.exporst = middlewareObj;
+module.exports = middlewareObj;
