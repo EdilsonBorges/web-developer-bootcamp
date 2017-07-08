@@ -6,6 +6,12 @@
         window.person               // "Elie"
         window.person === person    // true
         console.log(this)           // window
-    object/implicit
+    Object/Implicit
+        var dog = "Sam"
+        function makePerson(){
+            person = "Rob" // without the var keywork, becomes global
+            var person = "Rob"
+        }
+        
     explicit
     new
