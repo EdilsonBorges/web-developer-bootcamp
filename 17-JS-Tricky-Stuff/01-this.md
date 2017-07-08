@@ -9,9 +9,7 @@
     Object/Implicit
         var dog = "Sam"
         function makePerson(){
-            person = "Rob" // without the var keywork, becomes global
-            var person = "Rob"
+            this.person = "Rob" // this refers to window, so can be accessed outise the function
         }
-        
     explicit
     new
