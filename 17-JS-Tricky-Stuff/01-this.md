@@ -23,5 +23,6 @@
         }
         person.sayHi() // "Hi Elie"
         person.determineContext()  // true
-    explicit
+    Explicit
+        choose what we want the context of 'this' to be using call, apply and bind
     new
