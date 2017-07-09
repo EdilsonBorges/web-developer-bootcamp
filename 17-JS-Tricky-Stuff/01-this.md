@@ -25,4 +25,8 @@
         person.determineContext()  // true
     Explicit
         choose what we want the context of 'this' to be using call, apply and bind
+            method  |   parameters                  |  invoke immediately
+            Call    |   thisArg, a, b, c, d, ...    |   Yes
+            Apply   |   thisArg, [a, b, c, d, ...]  |   Yes
+            Bind    |   thisArg, a, b, c, d, ...    |   No
     new
