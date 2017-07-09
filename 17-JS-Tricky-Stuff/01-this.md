@@ -63,6 +63,10 @@
             method  |   parameters                  |  invoke immediately
             Apply   |   thisArg, [a, b, c, d, ...]  |   Yes
                 #### example ####
+                    addNumbers: function(a,b,c,d){
+                        return this.firstName + " just calculated " + (a+b+c+d)
+                    }
+
                     colt.sayHi.apply(elie) // "Hi elie"
                     colt.addNumbers.call(elie,1,2,3,4) // Elie just calculated 10
 
