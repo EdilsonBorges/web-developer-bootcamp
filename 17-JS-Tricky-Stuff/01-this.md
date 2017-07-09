@@ -27,6 +27,47 @@
         choose what we want the context of 'this' to be using call, apply and bind
             method  |   parameters                  |  invoke immediately
             Call    |   thisArg, a, b, c, d, ...    |   Yes
+                #### example ####
+
+                ##  before  ##
+                var colt = {
+                    firstName: "Colt",
+                    sayHi: function(){
+                        return "Hi " + this.firstName
+                    }
+                }
+
+                var elie = {
+                    firstName: "Elie",
+                    sayHi: function(){
+                        return "Hi " + this.firstName
+                    }
+                }               
+                colt.sayHi()
+                elie.sayHi() 
+
+                ##  after   ##
+                var colt = {
+                    firstName: "Colt",
+                    sayHi: function(){
+                        return "Hi " + this.firstName
+                    }
+                }
+
+                var elie = {
+                    firstName: "Elie"
+                }               
+                colt.sayHi()
+                colt.sayHi.call(elie) 
             Apply   |   thisArg, [a, b, c, d, ...]  |   Yes
             Bind    |   thisArg, a, b, c, d, ...    |   No
     new
+
+
+
+
+
+
+
+
+
