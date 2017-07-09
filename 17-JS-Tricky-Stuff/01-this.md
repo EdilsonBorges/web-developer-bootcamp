@@ -64,16 +64,8 @@
             Apply   |   thisArg, [a, b, c, d, ...]  |   Yes
                 #### example ####
                     colt.sayHi.apply(elie) // "Hi elie"
+                    colt.addNumbers.call(elie,1,2,3,4) // Elie just calculated 10
 
             method  |   parameters                  |  invoke immediately
             Bind    |   thisArg, a, b, c, d, ...    |   No
     new
-
-
-
-
-
-
-
-
-
