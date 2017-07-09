@@ -25,10 +25,10 @@
         person.determineContext()  // true
     Explicit
         choose what we want the context of 'this' to be using call, apply and bind
+
             method  |   parameters                  |  invoke immediately
             Call    |   thisArg, a, b, c, d, ...    |   Yes
                 #### example ####
-
                 ##  before  ##
                 var colt = {
                     firstName: "Colt",
@@ -58,8 +58,14 @@
                     firstName: "Elie"
                 }               
                 colt.sayHi()
-                colt.sayHi.call(elie) 
+                colt.sayHi.call(elie) // "Hi elie"
+
+            method  |   parameters                  |  invoke immediately
             Apply   |   thisArg, [a, b, c, d, ...]  |   Yes
+                #### example ####
+                    colt.sayHi.apply(elie) // "Hi elie"
+
+            method  |   parameters                  |  invoke immediately
             Bind    |   thisArg, a, b, c, d, ...    |   No
     new
 
