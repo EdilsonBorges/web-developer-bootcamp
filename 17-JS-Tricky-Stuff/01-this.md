@@ -72,4 +72,8 @@
 
             method  |   parameters                  |  invoke immediately
             Bind    |   thisArg, a, b, c, d, ...    |   No
+            work like call, but bind returns a function with the context of 'this' bound already
+                #### example ####
+                var elieCalc = colt.addNumbers.bind(elie,1,2,3,4) // function(){}...
+                elieCalc() // Elie just calculated 10
     new
