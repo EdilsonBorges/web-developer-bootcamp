@@ -95,5 +95,5 @@
                         }.bind(this), 1000);
                     }
                 }
-                colt.sayHi();
+                colt.sayHi(); // Hi colt
     new
