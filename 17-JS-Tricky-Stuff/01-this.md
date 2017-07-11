@@ -80,7 +80,10 @@
                 var colt = {
                     firstName: "Colt",
                     sayHi: function(){
-                        setTimeout(true)
+                        setTimeout(function(){
+                            console.log("Hi" + this.firstName)
+                        },1000);
                     }
                 }
+                colt.sayHi();
     new
