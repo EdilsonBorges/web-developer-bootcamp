@@ -75,5 +75,7 @@
             work like call, but bind returns a function with the context of 'this' bound already
                 #### example ####
                 var elieCalc = colt.addNumbers.bind(elie,1,2,3,4) // function(){}...
-                elieCalc() // Elie just calculated 10
+                elieCalc() // Elie just calculated 1011
+                ### example 2 ###
+                var colt = {}
     new
