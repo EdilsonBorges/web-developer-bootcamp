@@ -1,0 +1,4 @@
+- Define Object Oriented Programming
+- Revisit 'new' keyword
+- Use constructor
+- Use call and apply
