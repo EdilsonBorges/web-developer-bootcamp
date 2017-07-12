@@ -96,4 +96,10 @@
                     }
                 }
                 colt.sayHi(); // Hi colt
-    new
+    New
+       We can set the context of the keyword 'this' using the 'new' keyword
+       function Person(firstName, lastName){
+           this.firstName = firstName
+           this.lastName = lastName
+       }
+       var elie = new Person("Elie", "Schoppik");
