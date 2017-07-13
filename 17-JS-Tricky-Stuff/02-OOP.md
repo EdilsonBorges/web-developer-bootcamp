@@ -9,6 +9,9 @@
             this.bathrooms = bathrooms;
             this.numSqft = numSqft;
         }
+        -> Capitalization of the function name - this is convention
+        -> The keyword 'this' is back
+        -> We are attaching properties onto the keywork 'this'. We'd like the keyword 'this' to refer to the object we'll create from our constructor function.
 - Revisit 'new' keyword
 - Use constructor
 - Use call and apply
