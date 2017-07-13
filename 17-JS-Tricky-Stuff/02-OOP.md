@@ -25,6 +25,7 @@
         -> it first creates an empty object
         -> it then sets the keyword 'this' to be that empty object
         -> it adds the line return this
+        -> it adds a property onto the empty object called "__proto__", which links the prototype property on the constructor function to the empty object
 
 - Revisit 'new' keyword
 - Use constructor
