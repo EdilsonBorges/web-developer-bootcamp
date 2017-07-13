@@ -16,7 +16,13 @@
         Problem: how to we use our constuctor to actually construct objects?
         var firstHouse = House(2,2,1000)
         firstHouse // undefined
-        
+
+        Solution: we have to use 'new' keyword
+        var firstHouse = new House(2,2,1000)
+        firstHouse.bedrooms     // 2
+        firstHouse.bathrooms    // 2
+        firstHouse.numSqft      // 1000
+
 - Revisit 'new' keyword
 - Use constructor
 - Use call and apply
