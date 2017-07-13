@@ -22,6 +22,9 @@
         firstHouse.bedrooms     // 2
         firstHouse.bathrooms    // 2
         firstHouse.numSqft      // 1000
+        -> it first creates an empty object
+        -> it then sets the keyword 'this' to be that empty object
+        -> it adds the line return this
 
 - Revisit 'new' keyword
 - Use constructor
