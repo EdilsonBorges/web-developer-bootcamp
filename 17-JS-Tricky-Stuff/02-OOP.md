@@ -65,8 +65,14 @@
         this.year = year;
         this.numWheels = 4;
     }
+    Call:
     function Motorcycle(make, model, year){
         Car.call(this, make, model, year);
+        this.numWheels = 2;
+    }
+    Apply:
+    function Motorcycle(make, model, year){
+        Car.apply(this, [make, model, year]); // or Car.apply(this, arguments); 
         this.numWheels = 2;
     }
 
