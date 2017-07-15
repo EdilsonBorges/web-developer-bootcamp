@@ -44,17 +44,29 @@
     
 ## OOP 3 ##
 - Multiple Constructors
-    Two constructors:
+    Two standard constructors:
     function Car(make, model, year){
         this.make = make;
         this.model = model;
         this.year = year;
         this.numWheels = 4;
     }
-
     function Motorcycle(make, model, year){
         this.make = make;
         this.model = model;
         this.year = year;
         this.numWheels = 2;
     }
+
+    Using call/apply:
+    function Car(make, model, year){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.numWheels = 4;
+    }
+    function Motorcycle(make, model, year){
+        Car.call(this, make, model, year);
+        this.numWheels = 2;
+    }
+
