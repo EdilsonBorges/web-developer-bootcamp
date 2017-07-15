@@ -93,3 +93,8 @@
     Person.prototype.isInstructor = true;
     elie.isInstructor; // true
     colt.isInstructor; // true
+    ## example ##
+    var arr = [];
+    arr.push(10); // 1
+    console.dir(arr); // Array(1)0: 10length: 1__proto__: Array(0)
+    arr.__proto__ === Array.prototype
