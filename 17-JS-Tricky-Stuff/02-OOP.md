@@ -76,3 +76,8 @@
         this.numWheels = 2;
     }
 
+## OP 4 ##
+- Prototypes
+    - Every constructor function has a property on it called "prototype", which is an object
+    - The prototype object has a property on it called "constructor", which points back to the constructor function
+    - Anytime an object is created using the 'new' keyword, a property called "__proto__" gets created, linking the object and the prototype property of the constructor function
