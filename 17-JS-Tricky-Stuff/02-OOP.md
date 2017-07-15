@@ -98,3 +98,5 @@
     arr.push(10); // 1
     console.dir(arr); // Array(1)0: 10length: 1__proto__: Array(0)
     arr.__proto__ === Array.prototype
+    arr.hasOwnProperty('length') // true
+    dir(arr) // a lot of things, but no hasOwnProperty. At the bottom, we can see another __proto__, inside of it we can find hasOwnProperty
