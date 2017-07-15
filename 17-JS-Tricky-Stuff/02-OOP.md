@@ -87,3 +87,9 @@
     var elie = new Person("Elie");
     var colt = new Person("Colt");
     elie.__proto__ === Person.prototype // true
+
+- Prototype Chain
+    => The prototype is shared among all objects created by that constructor function
+    Person.prototype.isInstructor = true;
+    elie.isInstructor; // true
+    colt.isInstructor; // true
