@@ -81,3 +81,9 @@
     - Every constructor function has a property on it called "prototype", which is an object
     - The prototype object has a property on it called "constructor", which points back to the constructor function
     - Anytime an object is created using the 'new' keyword, a property called "__proto__" gets created, linking the object and the prototype property of the constructor function
+    function Person(name){
+	    this.name = name;
+    }
+    var elie = new Person("Elie");
+    var colt = new Person("Colt");
+    elie.__proto__ === Person.prototype // true
