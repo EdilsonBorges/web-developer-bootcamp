@@ -88,6 +88,7 @@
     var colt = new Person("Colt");
     elie.__proto__ === Person.prototype // true
 
+## OP 5 ##
 - Prototype Chain
     => The prototype is shared among all objects created by that constructor function
     Person.prototype.isInstructor = true;
@@ -100,3 +101,14 @@
     arr.__proto__ === Array.prototype
     arr.hasOwnProperty('length') // true
     dir(arr) // a lot of things, but no hasOwnProperty. At the bottom, we can see another __proto__, inside of it we can find hasOwnProperty
+
+## OP 6 ##
+- Exercise: Refactoring
+    function Person(name){
+        this.name = name;
+        this.sayHi = function(){
+            return "Hi" + this.name;
+        }
+    }
+    elie = new Person("Elie");
+    elie.sayHi();
