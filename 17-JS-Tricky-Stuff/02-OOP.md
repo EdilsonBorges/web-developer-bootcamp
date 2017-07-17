@@ -184,4 +184,16 @@
     }
     outer(5)(5); // 10
 
+    var storeOuter = outer(5)
+    storeOuter(10) // 15
+
+    Notes about closures:
+    1 - we have to 'return' the inner function for this to work
+    2 - we can either call the inner function right away by using an
+        extra () or we can store the result of the function in a variable
+        (very similar to how bind works)
+    3 - we do not have to give the inner function a name - we can
+        make it anonymous (we just called it "inner" for learning
+        purposes)
+
 
