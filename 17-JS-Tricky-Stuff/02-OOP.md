@@ -149,11 +149,15 @@
     carTest.honk() // "Vehicle is off"
     
     ## Recap ##
-    - Everytime the new keyword is used, a link between the object createdand the prototype
+    - Everytime the new keyword is used, a link between the object created and the prototype
     property of the constructor is established - this link can be accessed using __proto__
     - The prototype object contaions a property called constructor, which points back to
     the constructor function
     - To share properties and methods for objects created by a constructor function, place
     them in the prototype as it is the most efficient
 
+## OP 7 ##
+- Closures
+    - A closure is a function that makes use of variables defined in outer functions that
+    have previously returned
 
