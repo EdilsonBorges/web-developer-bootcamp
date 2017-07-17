@@ -170,3 +170,18 @@
     }
     outer()() // "closures are awesome"
 
+    ## example 2 ##
+    function outer(a){
+        return function inner(b){
+            /*
+            the inner function is making use of the variable "a"
+            which was defined in an outer function called "outer"
+            and by time this is called, that outer function has returned
+            this function called "inner" is a closure
+            */
+            return a + b
+        }
+    }
+    outer(5)(5); // 10
+
+
