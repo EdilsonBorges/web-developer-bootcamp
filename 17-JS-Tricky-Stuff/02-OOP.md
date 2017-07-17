@@ -136,7 +136,7 @@
         return this.isRunning = false;
     }
     Vehicle.prototype.honk = function(){
-        if(this.isRunning === true){
+        if(this.isRunning){
             return "beep";
         } else {
             return "Vehicle is off";
@@ -147,5 +147,13 @@
     carTest.honk() // "beep"
     carTest.turnOff() // false
     carTest.honk() // "Vehicle is off"
+    
+    ## Recap ##
+    - Everytime the new keyword is used, a link between the object createdand the prototype
+    property of the constructor is established - this link can be accessed using __proto__
+    - The prototype object contaions a property called constructor, which points back to
+    the constructor function
+    - To share properties and methods for objects created by a constructor function, place
+    them in the prototype as it is the most efficient
 
 
