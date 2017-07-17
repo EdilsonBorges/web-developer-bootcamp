@@ -121,3 +121,31 @@
     }
     elie = new Person("Elie");
     elie.sayHi();
+
+    ## Vehicle exercise ##
+    function Vehicle(make, model, year){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.isRunning = false;
+    }
+    Vehicle.prototype.turnOn = function(){
+        return this.isRunning = true;
+    }
+    Vehicle.prototype.turnOff = function(){
+        return this.isRunning = false;
+    }
+    Vehicle.prototype.honk = function(){
+        if(this.isRunning === true){
+            return "beep";
+        } else {
+            return "Vehicle is off";
+        }
+    }
+    var carTest = new Vehicle(1, 2, 2015); // undefined
+    carTest.turnOn() // true
+    carTest.honk() // "beep"
+    carTest.turnOff() // false
+    carTest.honk() // "Vehicle is off"
+
+
