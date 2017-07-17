@@ -160,4 +160,13 @@
 - Closures
     - A closure is a function that makes use of variables defined in outer functions that
     have previously returned
+    ## example ##
+    function outer(){
+        var data = "closures are ";
+        return function inner(){
+            var innerData = "awesome";
+            return data + innerData;
+        }
+    }
+    outer()() // "closures are awesome"
 
