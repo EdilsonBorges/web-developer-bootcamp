@@ -196,4 +196,22 @@
         make it anonymous (we just called it "inner" for learning
         purposes)
 
+    ## exercise ##
+    Is this a closure?
+    function outerFn(){
+        var data = "something from outer"
+        return function innerFn(){
+            return "Just returned from the inner function"
+        }
+    }
+
+    What about this?
+    function outerFn(){
+        var data = "something from outer"
+        retunr function innerFn(){
+            var innerData = "something from inner"
+            return data + " " + innerData
+        }
+    }
+
 
