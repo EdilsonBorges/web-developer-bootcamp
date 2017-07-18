@@ -202,16 +202,22 @@
         var data = "something from outer"
         return function innerFn(){
             return "Just returned from the inner function"
-        }
+        } // this is not a closure
     }
 
     What about this?
     function outerFn(){
         var data = "something from outer"
-        retunr function innerFn(){
+        return function innerFn(){
             var innerData = "something from inner"
             return data + " " + innerData
-        }
+        } // this is a closure
     }
+
+    A closure only exists when an inner function makes use of
+    variables defined from an outer function that has returned.
+    If the inner function does not make use of any of the external
+    variables all we have is a nested function.
+
 
 
