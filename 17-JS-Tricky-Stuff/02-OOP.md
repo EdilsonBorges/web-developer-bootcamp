@@ -224,6 +224,7 @@
     be modified externally, we call those private variables, but in JS
     we don't have that built in. Closured can help with that
 
+    ## example ##
     function counter(){
         var count = 0
         return function(){
@@ -241,3 +242,26 @@
     counter1() // 3 this is not affected by counter2
     count // ReferenceError: count is not defined (private)
 
+    ## example 2 ##
+    function classRoom(){
+        var instructors = ["Colt", "Elie"]
+        return {
+            getInstructors: function(){
+                return instructors;
+            },
+            addInstructor: function(instructor){
+                instructors.push(instructor);
+                return instructors;
+            }
+        }
+    }
+    course1 = classRoom()
+    course1.getInstructors() //  ["Colt", "Elie"]
+    course1.addInstructor("Ian") // ["Colt", "Elie", "Ian"]
+    course1.getInstructors() // ["Colt", "Elie", "Ian"]
+
+    course2 = classRoom()
+    course2.getInstructors() // ["Colt", "Elie"]
+
+    // we also have NO access to the instructors variable
+    // which makes it private - no one can modify it
