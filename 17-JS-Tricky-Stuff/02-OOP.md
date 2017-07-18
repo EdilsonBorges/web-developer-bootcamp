@@ -219,5 +219,7 @@
     If the inner function does not make use of any of the external
     variables all we have is a nested function.
 
-
-
+- Private Variables
+    In other languages, there exists support for variables that can't
+    be modified externally, we call those private variables, but in JS
+    we don't have that built in. Closured can help with that
