@@ -223,3 +223,21 @@
     In other languages, there exists support for variables that can't
     be modified externally, we call those private variables, but in JS
     we don't have that built in. Closured can help with that
+
+    function counter(){
+        var count = 0
+        return function(){
+            return ++count
+        }
+    }
+    counter1 = counter()
+    counter1() // 1
+    counter1() // 2
+
+    counter2 = counter()
+    counter2() // 1
+    counter2() // 2
+
+    counter1() // 3 this is not affected by counter2
+    count // ReferenceError: count is not defined (private)
+
