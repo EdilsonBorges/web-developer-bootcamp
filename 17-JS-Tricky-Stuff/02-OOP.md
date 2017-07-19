@@ -265,3 +265,24 @@
 
     // we also have NO access to the instructors variable
     // which makes it private - no one can modify it
+
+    ## example 3 ##
+
+    function newClosure(someNum, someRef) {
+       var num = someNum;
+        var anArray = [1,2,3];
+        var ref = someRef;
+        return function(x) {
+        num += x;
+        anArray.push(num);
+        alert('num: ' + num + 
+            '\nanArray ' + anArray.toString() + 
+            '\nref.someVar ' + ref.someVar);
+        }
+    }
+    closure1 = newClosure(40, {someVar : 'closure 1'});
+    closure2 = newClosure(1000, {someVar : 'closure 2'});
+
+    closure1(5); // num:50 anArray 1,2,3,45,50
+    closure2(-10); // num: 990 anArray 1,2,3,990
+
