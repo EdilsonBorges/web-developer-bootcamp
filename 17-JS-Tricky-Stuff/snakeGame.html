@@ -6,12 +6,12 @@ window.onload=function() {
 	document.addEventListener("keydown",keyPush);
 	setInterval(game,1000/15);
 }
-px=py=0;
-gs=tc=0;
-ax=ay=0;
+px=py=10;
+gs=tc=20;
+ax=ay=15;
 xv=yv=0;
 trail=[];
-tail = 0;
+tail = 5;
 function game() {
 	px+=xv;
 	py+=yv;
