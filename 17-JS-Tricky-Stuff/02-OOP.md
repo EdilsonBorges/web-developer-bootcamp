@@ -285,4 +285,13 @@
 
     closure1(5); // num:50 anArray 1,2,3,45,50
     closure2(-10); // num: 990 anArray 1,2,3,990
-
+    
+    ## Closure w jQuery ##
+$(function() {
+​
+​var selections = []; 
+$(".niners").click(function() { // this closure has access to the selections variable​
+selections.push (this.prop("name")); // update the selections variable in the outer function's scope​
+});
+​
+});
