@@ -5,16 +5,44 @@
 	<title>JSON Sandbox</title>
 </head>
 <body>
+	<ul id="people">
+	</ul>
 	<script>
 		var person = {
 			name: "Ed",
-			age: "28"
+			age: "28",
+			address: {
+				street: "3 st.",
+				city: "gyn"
+			},
+			children: ["Alice", "Arthur"]
 		}
 
 		// person = JSON.stringify(person);
 		// person = JSON.parse(person);
 
-		console.log(person);
+		var people = [
+			{
+				name: "Ed",
+				age: "28"
+			},
+			{
+				name: "Ted",
+				age: "21"
+			},
+			{
+				name: "Brian",
+				age: "37"
+			},
+		];
+
+		//console.log(people[1].age);
+		
+		var output = '';
+		for (var i = 0; i < people.length; i++) {
+			output += '<li>' + people[i].name + '</li>';
+		}
+		document.getElementById('people').innerHTML = output;
 	</script>
 </body>
 </html>
