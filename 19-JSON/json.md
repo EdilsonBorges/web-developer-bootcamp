@@ -19,3 +19,13 @@ Data Types
 # Array: Ordered list of 0 or more values
 # Object: Unordered collection of key/value pairs
 # Null: Empty value
+
+Rules
+-----
+
+# Uses key/value pairs - {"name":"Ed"}
+# Uses double quotes around KEY and VALUE
+# Must use the specified data type
+# File type is ".json"
+# MIME type is "Application/json"
+	MIME type (Multipurpose Internet Mail Extensions) is the mechanism to tell the client the variety of document transmitted: the extension of a file name has no meaning on the web.
