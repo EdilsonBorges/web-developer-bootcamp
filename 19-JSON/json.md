@@ -32,12 +32,26 @@ Rules
 
 Example
 -------
-{
-	"name": "Ed",
-	"age": "28",
-	"address": {
-		"street": "3 st.",
-		"city": "gyn"
-	},
-	"children": ["Alice", "Arthur"]
-}
+	{
+		"name": "Ed",
+		"age": "28",
+		"address": {
+			"street": "3 st.",
+			"city": "gyn"
+		},
+		"children": ["Alice", "Arthur"]
+	}
+
+Conversions
+-----------
+	var person = {
+		name: "Ed",
+		age: "28"
+	}
+
+# JS Object to valid JSON
+	person = JSON.stringify(person);
+
+# Valid JSON to JS Object
+	person = JSON.parse(person);
+
