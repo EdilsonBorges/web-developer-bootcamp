@@ -55,3 +55,20 @@ Conversions
 # Valid JSON to JS Object
 	person = JSON.parse(person);
 
+Getting data from JSON file
+---------------------------
+
+# 1 - XMLHttpRequest
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if(this.readyState == 4 && this.status == 200) {
+			console.log(xhttp.responseText);
+		}
+	};
+	xhttp.open("GET", "people.json", true);
+	xhttp.send();
+
+# 2 - installing node live-server
+	$ npm install -g live-server
+	$ live-server
+
