@@ -29,3 +29,15 @@ Rules
 # File type is ".json"
 # MIME type is "Application/json"
 	MIME type (Multipurpose Internet Mail Extensions) is the mechanism to tell the client the variety of document transmitted: the extension of a file name has no meaning on the web.
+
+Example
+-------
+{
+	"name": "Ed",
+	"age": "28",
+	"address": {
+		"street": "3 st.",
+		"city": "gyn"
+	},
+	"children": ["Alice", "Arthur"]
+}
