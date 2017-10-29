@@ -12,27 +12,34 @@ Mongodb is a NoSQL database program, MongoDB uses JSON-like documents with schem
 - net start MongoDB
 
 # Create a Database and a Collection
-use mycustomers
-db.createCollection('customers') to create a collection called 'customers'
+	use mycustomers
+	db.createCollection('customers') to create a collection called 'customers'
 
 # Insert new record on a collection
-db.customers.insert(
-			[
-				{first_name:"John", last_name:"Doe"},
-				{first_name:"Ed", last_name:"Hob"},
-				{first_name:"Steve", last_name:"Smith"},
-				{first_name:"Maria", last_name:"Clara", gender:"female"}
-			]
-		);
-db.customers.find();	show all records in customers collections
-db.customers.find().pretty();	nicer look to show all data in customers collections
+	db.customers.insert(
+				[
+					{first_name:"John", last_name:"Doe"},
+					{first_name:"Ed", last_name:"Hob"},
+					{first_name:"Steve", last_name:"Smith"},
+					{first_name:"Maria", last_name:"Clara", gender:"female"}
+				]
+			);
+	db.customers.find();	show all records in customers collections
+	db.customers.find().pretty();	nicer look to show all data in customers collections
+
+# Updating data
+	db.customers.update({first_name:"John"}, {first_name:"John", last_name:"Doe", gender:"male"})
+
+or is possible to use:
+
+	db.customers.update({first_name:"Steve"},{$set:{gender:"male"}})
 
 # Create user
-db.createUser({
-	user: "ed",
-	pwd: "1234",
-	roles: ["readWrite", "dbAdmin"]
-});
+	db.createUser({
+		user: "ed",
+		pwd: "1234",
+		roles: ["readWrite", "dbAdmin"]
+	});
 
 # Commands
 - show dbs			: show a list of databases
