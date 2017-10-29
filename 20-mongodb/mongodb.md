@@ -10,3 +10,34 @@ Mongodb is a NoSQL database program, MongoDB uses JSON-like documents with schem
 - cd c:\mongodb\bin
 - mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --rest --install
 - net start MongoDB
+
+# Create a Database and a Collection
+use mycustomers
+db.createCollection('customers') to create a collection called 'customers'
+
+# Insert new record on a collection
+db.customers.insert(
+			[
+				{first_name:"John", last_name:"Doe"},
+				{first_name:"Ed", last_name:"Hob"},
+				{first_name:"Steve", last_name:"Smith"},
+				{first_name:"Maria", last_name:"Clara", gender:"female"}
+			]
+		);
+db.customers.find();	show all records in customers collections
+db.customers.find().pretty();	nicer look to show all data in customers collections
+
+# Create user
+db.createUser({
+	user: "ed",
+	pwd: "1234",
+	roles: ["readWrite", "dbAdmin"]
+});
+
+# Commands
+- show dbs			: show a list of databases
+- db				: show current database
+- show collections	: show collections in current database
+- show users		: show users in current database
+- show profile		: show most recent system.profile entries with time >= 1ms
+- use mydatabase	: set current database
