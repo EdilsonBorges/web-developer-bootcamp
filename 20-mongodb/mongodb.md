@@ -28,11 +28,29 @@ Mongodb is a NoSQL database program, MongoDB uses JSON-like documents with schem
 	db.customers.find().pretty();	nicer look to show all data in customers collections
 
 # Updating data
+
 	db.customers.update({first_name:"John"}, {first_name:"John", last_name:"Doe", gender:"male"})
 
 or is possible to use:
 
 	db.customers.update({first_name:"Steve"},{$set:{gender:"male"}})
+
+we can also increment numbers with $inc:
+
+	db.customers.update({first_name:"Steve"},{$set:{age:45}}) 	# new field for Steve's age
+	db.customers.update({first_name:"Steve"},{$inc:{age:5}})	# incrementing 45 + 5 = 50
+
+unseting field:
+
+	db.customers.update({first_name:"Steve"},{$unset:{age:1}})
+
+updating an unexisting object and inserting it anyways with "upsert: true":
+
+	db.customers.update({first_name:"Mary"}, {first_name:"Mary", last_name:"Samson"},{upsert: true})
+
+update name of field:
+
+	db.customers.update({first_name:"Steve"}, {$rename:{"gender":"sex"}})
 
 # Create user
 	db.createUser({
