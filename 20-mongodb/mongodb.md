@@ -79,6 +79,21 @@ update name of field:
 	db.customers.find({memberships:/mem/}).sort({last_name:1}).pretty() : ascending order
 	db.customers.find({memberships:/mem/}).sort({last_name:-1}).pretty() : descending order
 
+# Count record
+
+	db.customers.find({memberships:/mem/}).count()
+
+# Limit record
+	
+	db.customers.find({memberships:/mem/}).limit(1)	
+
+# ForEach with MongoDB
+
+	db.customers.find().forEach(
+			function(doc){
+				print("Customer Name: "+doc.first_name)
+			}
+		)
 
 
 # Create user
