@@ -1,10 +1,14 @@
 const fetch = require('node-fetch')
 
-function fetchAvaterUrl(userId){
-     return fetch(`https://catappapi.herokuapp.com/users/${userId}`)
+async function fetchAvatarUrl(userId) {
+    const response = await fetch(`https://catappapi.herokuapp.com/users/${userId}`)
+    const data = await response.json()
+    data
+    return data.imageUrl
+     /*return fetch(`https://catappapi.herokuapp.com/users/${userId}`)
      .then(response => response.json())
-
+     .then(data => data.imageUrl)*/
 }
 
-const result = fetchAvaterUrl(123)
+const result = fetchAvatarUrl(123)
 result
