@@ -1,0 +1,16 @@
+{
+  "name": "21-async-await",
+  "version": "1.0.0",
+  "main": "script.js",
+  "dependencies": {
+    "eslint": "^4.10.0",
+    "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
