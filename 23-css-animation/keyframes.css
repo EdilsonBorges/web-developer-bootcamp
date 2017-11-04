@@ -11,6 +11,7 @@ body {
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	animation-delay: 2s;
+	animation-direction: alternate-reverse; /*reverse*/
 }
 
 @keyframes myanimation {
