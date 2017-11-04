@@ -9,8 +9,9 @@ body {
 	position: relative;
 	animation-name: myanimation;
 	animation-duration: 4s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards; /*keeps the shape of current solid*/
 	/*animation-delay: 2s;*/
 	/*animation-direction: alternate-reverse; /*reverse*/
 }
