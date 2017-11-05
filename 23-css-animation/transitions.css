@@ -10,9 +10,9 @@ body {
 	margin: auto;
 	top: 200px;
 	transition-property: background;
-	transition-duration: 0.4s;
+	transition-duration: 0.9s;
 }
 
-.box:hover{
+.box:active{
 	background: red;
 }
