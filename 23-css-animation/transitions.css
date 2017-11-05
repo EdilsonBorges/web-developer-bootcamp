@@ -9,6 +9,8 @@ body {
 	position: relative;
 	margin: auto;
 	top: 200px;
+	transition-property: background;
+	transition-duration: 0.4s;
 }
 
 .box:hover{
