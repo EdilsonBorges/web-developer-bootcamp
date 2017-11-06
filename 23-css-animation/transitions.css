@@ -9,14 +9,15 @@ body {
 	position: relative;
 	margin: auto;
 	top: 200px;
-	transition-property: background, border-radius, transform;
-	transition-duration: 1s, 3s; /*second parameter matches transition property*/
-	transition-delay: 0.5s, 4s;
-	transition-timing-function: ease-in;
+	/*transition-property: background, border-radius, transform;*/
+	transition-property: all;
+	transition-duration: 0.3s; /*second parameter matches transition property*/
+	transition-delay: 0.1s, 4s;
+	transition-timing-function: ease-in-out;
 }
 
 .box:hover{
-	background: red;
+	background: yellow;
 	border-radius: 50%;
 	transform: rotateY(180deg);
 }
