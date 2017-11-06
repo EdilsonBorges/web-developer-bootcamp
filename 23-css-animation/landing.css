@@ -46,3 +46,22 @@ body {
 	0% {left: -1000px}
 	100% {left: 0px}
 }
+
+.btn {
+	display: inline-block;
+	animation: btnAnimation;
+	color: #fff;
+	padding: 1rem 2rem;
+	border: #fff 1px solid;
+	margin-top: 40px;
+	text-decoration: none;
+	animation-delay: 1s;
+	animation-duration: 1s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+@keyframes btnAnimation {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
